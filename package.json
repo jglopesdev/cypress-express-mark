@@ -1,0 +1,17 @@
+{
+  "name": "cypress-express-mark",
+  "version": "1.0.0",
+  "description": "Projeto de testes de ponta a ponta no Mark L",
+  "main": "index.js",
+  "author": "João Lopes",
+  "license": "MIT",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:open:mobile": "cypress open --config viewportWidth=410 viewportHeight=860",
+    "cy:run:mobile": "cypress run --config viewportWidth=410 viewportHeight=860"
+  },
+  "devDependencies": {
+    "cypress": "^14.1.0"
+  }
+}
