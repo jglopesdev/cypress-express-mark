@@ -10,20 +10,31 @@ Projeto criado a partir dos conhecimentos aprendidos durante o curso [Cypress eX
 
 ## Instalação
 
-Rode o comando `npm install` (ou a versão curta `npm i`) para instalar as dependencias de desenvolvimento.
+No diretorio raíz do projeto, rode o comando `npm install` (ou a versão curta `npm i`) para instalar as dependencias de desenvolvimento, que no caso é somente o Cypress.
+
+###### Subir API e banco de dados
+Acesse o diretório apps/api e execute os comando `npm install` para baixar as dependências da API.      
+Execute o comando `npm run db:init` para inicializar o banco de dados SQLite      
+Execute o comando `npm run dev` para colocar a API no ar
+
+
+###### Subir aplicação Web
+Acesse o diretório apps/web e execute os comando `npm install` para baixar as dependências. 
+Execute o comando `npm run dev` para colocar a aplicação Web no ar
+
 
 ## Testes
 
 Neste projeto, você pode executar os testes em viewports de desktop e mobile.
 
-##### Desktop
+###### Desktop
 Execute o comando `npx cypress run` para executar o teste em modo headless.     
 Ou, execute o NPM Script já criado `cy:run` para executar o teste em modo headless.     
 
 Execute o comando `npx cypress open` para executar o teste em modo interativo (UI).     
 Ou, execute o NPM Script já criado `cy:open` para executar o teste em modo interativo (UI). 
 
-##### Mobile
+###### Mobile
     
 Use, o NPM Script `cy:open:mobile` para executar o teste em viewport mobile em modo interativo (UI).      
 
