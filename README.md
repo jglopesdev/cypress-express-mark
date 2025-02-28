@@ -6,7 +6,7 @@ Projeto criado a partir dos conhecimentos aprendidos durante o curso [Cypress eX
 
 É necessário ter instalado o Node.js e o npm para executar este projeto.
 
-> Eu usei a versão `v18.20.7` and `10.8.2` do Node.js e npm, respectivamente. Eu sugeriro que você use a mesma versão do Node.js para não ter problemas para subir a api e o servidor web.
+> Eu usei a versão `v18.20.7` and `10.8.2` do Node.js e npm, respectivamente. Eu sugiro que você use a mesma versão do Node.js para não ter problemas para subir a api e o servidor web.
 
 ## Instalação
 
