@@ -29,6 +29,14 @@ describe('tarefas', () => {
         .should('be.visible')
         .and('have.text', 'Task already exists!')
   })
+
+  it('Campo obrigatorio', () => {
+    cy.createTask()
+
+    cy.isRequired('This is a required field')
+  })
+
+
+
+
 })
-
-

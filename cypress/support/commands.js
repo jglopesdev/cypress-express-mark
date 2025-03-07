@@ -1,13 +1,26 @@
 /// <reference types="cypress" />
 
-Cypress.Commands.add('createTask', (taskName) => {
-  
+Cypress.Commands.add('createTask', (taskName = '') => {
     cy.visit('http://127.0.0.1:3000')
-  
-    cy.get('input[placeholder="Add a new Task"]')
+
+    cy.get('input[placeholder="Add a new Task"]').as('inputTask')
+
+    if (taskName !== '') {
+        cy.get('@inputTask')
           .type(taskName)
+    }
   
     cy.contains('button', 'Create').click()
+  })
+  
+  Cypress.Commands.add('isRequired', (targetMessage) => {
+    cy.get('@inputTask')
+        .invoke('prop', 'validationMessage')
+        .should((text) => {
+          expect(
+            targetMessage
+          ).to.eq(text)
+        })
   })
 
   Cypress.Commands.add('removeTaskByName', (taskName) => {
