@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 Cypress.Commands.add('createTask', (taskName = '') => {
-    cy.visit('http://127.0.0.1:3000')
+    cy.visit('/')
 
     cy.get('input[placeholder="Add a new Task"]').as('inputTask')
 
@@ -25,7 +25,7 @@ Cypress.Commands.add('createTask', (taskName = '') => {
 
   Cypress.Commands.add('removeTaskByName', (taskName) => {
     cy.request({
-        url: 'http://localhost:3333/helper/tasks',
+        url: Cypress.env('apiUrl') + '/helper/tasks',
         method: 'DELETE',
         body: { name: taskName }
       }).then(response => {
@@ -35,7 +35,7 @@ Cypress.Commands.add('createTask', (taskName = '') => {
 
   Cypress.Commands.add('postTask', (task) => {
     cy.request({
-        url: 'http://localhost:3333/tasks',
+        url: Cypress.env('apiUrl') + '/tasks',
         method: 'POST',
         body: task
       }).then(response => {
