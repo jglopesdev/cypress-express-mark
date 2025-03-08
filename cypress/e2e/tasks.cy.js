@@ -2,6 +2,14 @@
 
 describe('tarefas', () => {
 
+  let testData;
+
+  before(() => {
+    cy.fixture('tasks').then(t => {
+      testData = t
+    })
+  })
+
   context('cadastro', () => {
     it('Deve cadastrar uma nova tarefa', () => {
 
@@ -16,10 +24,7 @@ describe('tarefas', () => {
     })
     it('Não deve permitir tarefa duplicada', () => {
 
-      const task = {
-        name: 'Tirar certificação CTFL',
-        is_done: false
-      }
+      const task = testData.dup
 
       cy.removeTaskByName(task.name)
 
