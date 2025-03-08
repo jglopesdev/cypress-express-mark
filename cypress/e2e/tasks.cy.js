@@ -13,7 +13,7 @@ describe('tarefas', () => {
   context('cadastro', () => {
     it('Deve cadastrar uma nova tarefa', () => {
 
-      const taskName = 'Ler um livro de node.js'
+      const taskName = 'Ler um livro de Node.js'
 
       cy.removeTaskByName(taskName)
 

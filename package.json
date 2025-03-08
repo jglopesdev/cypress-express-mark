@@ -9,9 +9,11 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:open:mobile": "cypress open --config viewportWidth=410 viewportHeight=860",
-    "cy:run:mobile": "cypress run --config viewportWidth=410 viewportHeight=860"
+    "cy:run:mobile": "cypress run --config viewportWidth=410 viewportHeight=860",
+    "cy:run:allure": "cypress run --env allure=true"
   },
   "devDependencies": {
-    "cypress": "^14.1.0"
+    "@shelex/cypress-allure-plugin": "^2.40.2",
+    "cypress": "12.5.1"
   }
 }
