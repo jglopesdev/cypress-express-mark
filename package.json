@@ -10,10 +10,13 @@
     "cy:run": "cypress run",
     "cy:open:mobile": "cypress open --config viewportWidth=410 viewportHeight=860",
     "cy:run:mobile": "cypress run --config viewportWidth=410 viewportHeight=860",
-    "cy:run:allure": "cypress run --env allure=true"
+    "cy:run:allure": "cypress run --env allure=true",
+    "cy:allure:srv": "yarn allure generate ./allure-results/ -o ./report-server"
   },
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.40.2",
-    "cypress": "12.5.1"
+    "allure-commandline": "^2.33.0",
+    "cypress": "12.5.1",
+    "http-server": "^14.1.1"
   }
 }
